@@ -4,11 +4,13 @@ import Landing from './Landing.js'
 import AddGame from './AddGame.js'
 import Stats from './Stats.js'
 import { Router } from "@reach/router";
+import NavBar from './NavBar';
 
 class App extends Component {
   render() {
     return (
       <div >
+        <NavBar />
         <Router>
           <Landing path="/"/>
           <AddGame path="add-game"/>

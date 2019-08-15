@@ -5,8 +5,6 @@ import NavBar from "./NavBar"
 function AddGame() {
   return (
     <div>
-      <NavBar/>
-
       Loaded AddGame Div
     </div>
   );

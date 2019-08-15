@@ -5,8 +5,6 @@ import NavBar from "./NavBar"
 function Stats() {
   return (
     <div>
-      <NavBar/>
-
       Loaded Stats Div
     </div>
   );

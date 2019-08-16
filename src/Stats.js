@@ -3,10 +3,8 @@ class Stats extends Component {
   constructor() {
     super();
     this.state = {
-      name: "",
-      sent: false
+      // names: "",
     };
-    // this.handleSubmit = this.handleSubmit.bind(this);
   }
 
   // handleChange = name => event => {
@@ -36,23 +34,18 @@ class Stats extends Component {
   componentDidMount() {
     fetch('http://localhost:3001/api/players')
       .then(response => response.json())
-      .then(data => console.log('data response', data));
-    // fetch("http://localhost:3001/api/players", {
-    //     method: "GET",
-    //     headers: {
-    //       Accept: "application/json",
-    //       "Content-Type": "application/json"
-    //     },
-    //     body: JSON.stringify(this.state)
-    //   }).then(function() {
-    //     return;
-    //   });
-    }
+      .then(data =>  this.setState({names: data}));
+  }
 
   render() {
+    const names = this.state.names
+
     return (
       <div>
         Loaded Stats Div
+          {this.state.names ? names.map(function(name, index){
+                    return <div key={ index }>{name.username}</div>;
+          }) : ""}
       </div>
     );
   }

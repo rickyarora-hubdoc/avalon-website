@@ -5,21 +5,25 @@ import AddGame from './AddGame.js'
 import Stats from './Stats.js'
 import { Router } from "@reach/router";
 import NavBar from './NavBar';
-import Box from '@material-ui/core/Box';
+import Grid from '@material-ui/core/Grid';
+import Demo from './demo';
 
 
 
 class App extends Component {
   render() {
     return (
-    <Box color="primary">
+    <Grid container spacing={3} justify="center" alignItems="center">
+      <Grid item md={12}>
+      <Demo />
+      </Grid>
       <NavBar />
         <Router>
           <Landing path="/"/>
           <AddGame path="add-game"/>
           <Stats path="stats"/>
         </Router>
-    </Box>
+    </Grid>
     );
   }
 }

@@ -48,7 +48,7 @@ function a11yProps(index) {
 const useStyles = makeStyles(theme => ({
   root: {
     backgroundColor: theme.palette.background.paper,
-    minWidth: 500,
+    width: 500,
     position: 'relative',
     minHeight: 200,
   },
@@ -152,4 +152,5 @@ export default function FloatingActionButtonZoom() {
         </Zoom>
       ))}
     </div>
-  )};
+  );
+

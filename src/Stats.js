@@ -42,7 +42,6 @@ class Stats extends Component {
 
     return (
       <div>
-        Loaded Stats Div
           {this.state.names ? names.map(function(name, index){
                     return <div key={ index }>{name.username}</div>;
           }) : ""}

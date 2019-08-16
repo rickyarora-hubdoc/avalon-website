@@ -10,9 +10,17 @@ import Demo from './demo';
 
 
 
+let imgUrl = '../texture.png'; 
+
 class App extends Component {
   render() {
     return (
+<div className = 'Component-Bg' 
+     style = {{ backgroundImage: 'url(' + imgUrl + ')', 
+                backgroundSize: 'cover', 
+                backgroundPosition: 'center center',
+                backgroundRepeat: 'no-repeat',
+              }}>
     <Grid container spacing={3} justify="center" alignItems="center">
       <Grid item md={12}>
       <Demo />
@@ -24,6 +32,7 @@ class App extends Component {
           <Stats path="stats"/>
         </Router>
     </Grid>
+    </div>
     );
   }
 }

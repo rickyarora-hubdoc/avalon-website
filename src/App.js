@@ -5,18 +5,21 @@ import AddGame from './AddGame.js'
 import Stats from './Stats.js'
 import { Router } from "@reach/router";
 import NavBar from './NavBar';
+import Box from '@material-ui/core/Box';
+
+
 
 class App extends Component {
   render() {
     return (
-      <div >
-        <NavBar />
+    <Box color="primary">
+      <NavBar />
         <Router>
           <Landing path="/"/>
           <AddGame path="add-game"/>
           <Stats path="stats"/>
         </Router>
-      </div>
+    </Box>
     );
   }
 }
